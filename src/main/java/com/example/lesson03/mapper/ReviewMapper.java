@@ -19,4 +19,8 @@ public interface ReviewMapper {
 			@Param("userName")String userName, 
 			@Param("point")Double point, 
 			@Param("review")String review);
+	public int updateReviewById(
+			@Param("id") int id,
+			@Param("review") String review);
+	public int deleteReviewById(int id);// bo가 받던 말던 상관없지만 int로 해도 가능 하다 void(리턴을 아에 않받는다는의미)
 }

@@ -65,5 +65,23 @@
 		)	
 	</insert>
 	
+	<update id="updateReviewById" parameterType="map">
+		UPDATE`new_review`
+		SET
+			`review` = #{review}
+			,`updatedAt` = NOW()
+		WHERE
+			`id` = #{id}
+	</update>
+	
+	<delete id="deleteReviewById" parameterType="int">
+		DELETE
+		FROM
+			`new_review`
+		WHERE
+			`id` = #{id}
+
+	</delete>
+	
 	
 </mapper>
